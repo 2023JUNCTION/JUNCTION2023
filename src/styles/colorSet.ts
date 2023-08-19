@@ -8,6 +8,8 @@ const colorSet = {
   deselected: "#D6D6D6",
   placeholder: "#E3E3E3",
   colorless: "#FFFFFF", // CSS 기본 "white"과의 혼동을 피하기 위해 "colorless"로 표기
+  unselect: "E8E8E8",
+  select: "9E9E9E",
 };
 
 export default colorSet;
