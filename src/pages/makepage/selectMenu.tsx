@@ -8,6 +8,9 @@ const SelectMenu = () => {
   return (
     <div
       style={{
+        position: "fixed",
+        right: "0px",
+
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -16,7 +19,6 @@ const SelectMenu = () => {
         height: "100vh",
         backgroundColor: "#FAFAFA",
         boxShadow: "-10px 0px 10px rgba(151, 151, 151, 0.3)",
-        margin: "30px",
       }}
     >
       <div

@@ -1,4 +1,3 @@
-import Area from "src/atoms/containers/Area";
 import Tag from "src/atoms/tag/Tag";
 import Text from "src/atoms/text/Text";
 import SelectMenu from "src/pages/makepage/selectMenu";
@@ -8,43 +7,47 @@ import Font from "src/styles/font";
 
 const MakePage = () => {
   return (
-    <>
-      <Area>
+    <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100vw",
+          height: "100vh",
+        }}
+      >
         <div
           style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "20px",
-            width: "100vw",
+            position: "absolute",
+            left: "320px",
           }}
         >
-          <div>
-            <Text size="1.5rem" font={Font.Bold}>
-              2023.08.20. - Breakfast
+          <Text size="1.5rem" font={Font.Bold}>
+            2023.08.20. - Breakfast
+          </Text>
+          <Tag color="#FF288F">
+            <Text color={colorSet.white} font={Font.Regular}>
+              Diabetes
             </Text>
-            <Tag color="#FF288F">
-              <Text color={colorSet.white} font={Font.Regular}>
-                Diabetes
-              </Text>
-            </Tag>
-            <Tag color="#FF288F">
-              <Text color={colorSet.white} font={Font.Regular}>
-                No Caffeine
-              </Text>
-            </Tag>
-            <Tag color="#FF288F">
-              <Text color={colorSet.white} font={Font.Regular}>
-                Low salt
-              </Text>
-            </Tag>
-            <Tray></Tray>
-          </div>
-          <SelectMenu></SelectMenu>
+          </Tag>
+          <Tag color="#FF288F">
+            <Text color={colorSet.white} font={Font.Regular}>
+              No Caffeine
+            </Text>
+          </Tag>
+          <Tag color="#FF288F">
+            <Text color={colorSet.white} font={Font.Regular}>
+              Low salt
+            </Text>
+          </Tag>
+          <Tray></Tray>
         </div>
-      </Area>
-    </>
+
+        <SelectMenu></SelectMenu>
+      </div>
+    </div>
   );
 };
 
