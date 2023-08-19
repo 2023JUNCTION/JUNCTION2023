@@ -1,18 +1,22 @@
 import "./App.css";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
+import Layout from "./layout/Layout";
 import Homepage from "./pages/homepage/homepage";
-function App() {
+import GlobalStyle from "./styles/globalStyles";
+
+const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
+      <GlobalStyle />
+      <Routes>
+        <Route element={<Layout />}>
           <Route path="/" element={<Homepage />} />
-        </Routes>
-      </BrowserRouter>
+        </Route>
+      </Routes>
     </>
   );
-}
+};
 
 export default App;

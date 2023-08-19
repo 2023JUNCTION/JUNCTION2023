@@ -10,6 +10,8 @@
     "lint": "eslint src/"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.32.6",
+    "axios": "^1.4.0",
     "i18next": "^23.2.8",
     "i18next-browser-languagedetector": "^7.0.1",
     "prettier": "^2.8.1",
