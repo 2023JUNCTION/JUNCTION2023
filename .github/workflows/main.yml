@@ -43,13 +43,4 @@ jobs:
         host: ${{ secrets.LIGHTSAIL_HOST }}
         key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
         source: "./build/*"
-        target: "/home/bitnami/FrontEnd"
-    
-    - name: Restart PM2 process
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.LIGHTSAIL_HOST }}
-        username: bitnami
-        key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
-        script: |
-          pm2 reload app
+        target: "/opt/bitnami/apache/htdocs"
