@@ -1,4 +1,7 @@
 import { Outlet } from "react-router-dom";
+import Flex from "src/atoms/containers/Flex";
+
+import PageSide from "./PageSide";
 // import useAuth from "src/hooks/useAuth";
 
 const Layout = () => {
@@ -6,7 +9,10 @@ const Layout = () => {
 
   return (
     <>
-      <Outlet />
+      <Flex width="100vw" height="100vh">
+        <PageSide />
+        <Outlet />
+      </Flex>
     </>
   );
 };
