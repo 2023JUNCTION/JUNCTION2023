@@ -2,7 +2,7 @@ name: Deploy to Amazon Lightsail
 
 on:
   push:
-    branches: [ "main" ] 
+    branches: [ "master" ] 
 
 env:
   AWS_REGION: ap-northeast-2                   # set this to your preferred AWS region, e.g. us-west-1
