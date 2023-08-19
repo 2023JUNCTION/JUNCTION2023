@@ -10,12 +10,12 @@ interface ButtonProps {
 }
 
 const Button = styled.button<ButtonProps>`
-  width: ${(props) => props.width || "200px"};
-  height: ${(props) => props.height || "200px"};
+  width: ${(props) => props.width || "150px"};
+  height: ${(props) => props.height || "150px"};
   border: ${(props) => props.border || "none"};
   border-radius: ${(props) => props.borderRadius || "50%"};
   background-color: ${(props) =>
-    props.disabled ? "#e0e0e0" : colorSet.deselected};
+    props.disabled ? "#e0e0e0" : colorSet.gray10};
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
@@ -27,7 +27,7 @@ const Button = styled.button<ButtonProps>`
       : "inset -10px -10px 10px rgba(151, 151, 151, 0.5)"};
   &:hover {
     background-color: ${(props) =>
-      props.disabled ? "#e0e0e0" : colorSet.secondaryText};
+      props.disabled ? "#e0e0e0" : colorSet.gray40};
   }
   &:focus {
     outline: none;

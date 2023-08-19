@@ -23,8 +23,8 @@ const Tray = () => {
           <Button borderRadius={"30%"}></Button>
         </div>
         <div>
-          <Button width="350px" height="350px"></Button>
-          <Button width="350px" height="350px"></Button>
+          <Button width="250px" height="250px"></Button>
+          <Button width="250px" height="250px"></Button>
         </div>
       </div>
     </div>

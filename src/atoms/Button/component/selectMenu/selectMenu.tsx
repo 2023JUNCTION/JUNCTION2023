@@ -1,5 +1,6 @@
 import Font from "src/styles/font";
 
+import MenuSelect from "../../menuSelect";
 import Text from "../Text/text";
 
 const SelectMenu = () => {
@@ -11,7 +12,7 @@ const SelectMenu = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        width: "350px",
+        width: "600px",
         height: "100vh",
         backgroundColor: "#FAFAFA",
         boxShadow: "-10px 0px 10px rgba(151, 151, 151, 0.3)",
@@ -26,7 +27,7 @@ const SelectMenu = () => {
         }}
       >
         <Text
-          size={"1.2rem"}
+          size={"1.5rem"}
           font={Font.Bold}
           style={{
             padding: "10px",
@@ -39,13 +40,24 @@ const SelectMenu = () => {
       </div>
       <div
         style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <MenuSelect></MenuSelect>
+        <MenuSelect></MenuSelect>
+      </div>
+      <div
+        style={{
           //backgroundColor: "#ffeab8",
           height: "50px",
           width: "100%",
         }}
       >
         <Text
-          size={"1.2rem"}
+          size={"1.5rem"}
           font={Font.Bold}
           style={{
             padding: "10px",
