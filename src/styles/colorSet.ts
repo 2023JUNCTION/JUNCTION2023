@@ -14,7 +14,8 @@ const colorSet = {
   disease: "#FF288F",
   medication: "#FF4228",
   bloodPressure: "#00B2FF",
-  
+
+  stroke: "#D4D4D4",
   unselect: "E8E8E8",
   select: "9E9E9E",
 };

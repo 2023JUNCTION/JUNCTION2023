@@ -1,9 +1,9 @@
-import Table from "src/molecule/table/Table";
+import PatientInfoTable from "src/molecule/table/PatientInfoTable";
 
 const Playground = () => {
   return (
     <>
-      <Table />
+      <PatientInfoTable />
     </>
   );
 };

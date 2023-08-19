@@ -4,8 +4,8 @@ export interface PatientInfo {
   patient_age: number;
   patient_height: number;
   patient_weight: number;
-  patient_diseases: string[];
-  patient_medicines: string[];
+  patient_disease: string;
+  patient_medicine: string;
   patient_blood_pressure: [number, number];
   patient_blood_sugar: number;
   patient_bmi: number;
@@ -23,17 +23,12 @@ function generateRandomName(): string {
   return names[getRandomInt(0, names.length - 1)];
 }
 
-function generateRandomDisease(): string[] {
+function generateRandomDisease(): string {
   const diseases = ["Diabetes", "Hypertension", "Asthma", "Cold", "Flu"];
-  const count = 1;
-  const patientDiseases = [];
-  for (let i = 0; i < count; i++) {
-    patientDiseases.push(diseases[getRandomInt(0, diseases.length - 1)]);
-  }
-  return Array.from(new Set(patientDiseases)); // Ensuring no duplicates
+  return diseases[getRandomInt(0, diseases.length - 1)];
 }
 
-function generateRandomMedicine(): string[] {
+function generateRandomMedicine(): string {
   const medicines = [
     "Paracetamol",
     "Metformin",
@@ -41,12 +36,7 @@ function generateRandomMedicine(): string[] {
     "Lisinopril",
     "Amlodipine",
   ];
-  const count = 1;
-  const patientMedicines = [];
-  for (let i = 0; i < count; i++) {
-    patientMedicines.push(medicines[getRandomInt(0, medicines.length - 1)]);
-  }
-  return Array.from(new Set(patientMedicines)); // Ensuring no duplicates
+  return medicines[getRandomInt(0, medicines.length - 1)];
 }
 
 function generateDummyPatientInfo(): PatientInfo {
@@ -63,8 +53,8 @@ function generateDummyPatientInfo(): PatientInfo {
     patient_age: age,
     patient_height: height,
     patient_weight: weight,
-    patient_diseases: generateRandomDisease(),
-    patient_medicines: generateRandomMedicine(),
+    patient_disease: generateRandomDisease(),
+    patient_medicine: generateRandomMedicine(),
     patient_blood_pressure: [getRandomInt(90, 140), getRandomInt(60, 90)],
     patient_blood_sugar: getRandomInt(70, 140),
     patient_bmi: Number((weight / (height / 100) ** 2).toFixed(2)),
