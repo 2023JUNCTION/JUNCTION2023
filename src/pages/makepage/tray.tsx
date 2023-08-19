@@ -1,6 +1,6 @@
 import colorSet from "src/styles/colorSet";
 
-import Button from "../../Button";
+import Button from "../../atoms/Button/Button";
 
 const Tray = () => {
   return (

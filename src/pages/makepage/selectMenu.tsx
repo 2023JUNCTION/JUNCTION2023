@@ -1,7 +1,7 @@
+import Text from "src/atoms/text/Text";
 import Font from "src/styles/font";
 
-import MenuSelect from "../../menuSelect";
-import Text from "../Text/text";
+import MenuSelect from "./menuSelect";
 
 const SelectMenu = () => {
   return (
