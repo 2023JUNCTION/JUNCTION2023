@@ -52,4 +52,4 @@ jobs:
         key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
         script: |
           cd /opt/bitnami/apache/htdocs/build
-          mv * .. 
+          cp -rf * ..
