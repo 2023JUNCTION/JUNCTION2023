@@ -23,7 +23,7 @@ const MenuSelect = styled.button<ButtonProps>`
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   &:hover {
     background-color: ${(props) =>
-      props.disabled ? "#e0e0e0" : colorSet.gray40};
+      props.disabled ? "#ffffff44" : colorSet.gray40};
     border: 3px solid ${colorSet.primary};
   }
   &:focus {

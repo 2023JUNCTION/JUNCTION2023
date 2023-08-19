@@ -1,4 +1,5 @@
 import Text from "src/atoms/text/Text";
+import colorSet from "src/styles/colorSet";
 import Font from "src/styles/font";
 
 import MenuSelect from "./menuSelect";
@@ -7,12 +8,11 @@ const SelectMenu = () => {
   return (
     <div
       style={{
-        borderRadius: "1%",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        width: "600px",
+        width: "500px",
         height: "100vh",
         backgroundColor: "#FAFAFA",
         boxShadow: "-10px 0px 10px rgba(151, 151, 151, 0.3)",
@@ -46,12 +46,82 @@ const SelectMenu = () => {
           alignItems: "center",
         }}
       >
-        <MenuSelect></MenuSelect>
-        <MenuSelect></MenuSelect>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <MenuSelect width="100px" height="120px" borderRadius={"20%"}>
+            <img
+              width="100%"
+              height="100%"
+              src="public\foodImg\frame 371.png"
+            ></img>
+          </MenuSelect>
+          <Text font={Font.Bold}>Jangjorim</Text>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <MenuSelect width="100px" height="120px" borderRadius={"20%"}>
+            <img
+              width="100%"
+              height="100%"
+              src="public\foodImg\Frame 371(1).png"
+            ></img>
+          </MenuSelect>
+          <Text font={Font.Bold}>Fried-Tofu</Text>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <MenuSelect width="100px" height="120px" borderRadius={"20%"}>
+            <img
+              width="100%"
+              height="100%"
+              src="public\foodImg\Frame 371(2).png"
+            ></img>
+          </MenuSelect>
+          <Text font={Font.Bold}>
+            Stir-fried
+            <br />
+            anchovies
+          </Text>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <MenuSelect width="100px" height="120px" borderRadius={"20%"}>
+            <img
+              width="35px"
+              height="35px"
+              src="public\foodImg\unselect.png"
+            ></img>
+          </MenuSelect>
+          <Text font={Font.Bold}>Unselect</Text>
+        </div>
       </div>
       <div
         style={{
-          //backgroundColor: "#ffeab8",
+          backgroundColor: colorSet.gray05,
           height: "50px",
           width: "100%",
         }}
@@ -65,50 +135,52 @@ const SelectMenu = () => {
             alignItems: "center",
           }}
         >
-          Nutritional Control
+          Nutrients of Caution
         </Text>
       </div>
       <div
         style={{
           width: "70%",
-          padding: "10px",
+          padding: "15px",
           display: "flex",
           alignContent: "center",
-          backgroundColor: "#F1F1F1",
+          backgroundColor: "#DCFFE6",
           justifyContent: "space-between",
         }}
       >
-        <Text font={Font.Medium}>Salt</Text>
-        <Text font={Font.Medium}>mg</Text>
+        <Text color="#00E27B" font={Font.Medium}>
+          Sodium
+        </Text>
+        <Text color="#00E27B" font={Font.Medium}>
+          10mg
+        </Text>
       </div>
       <div
         style={{
           width: "70%",
-          padding: "10px",
+          padding: "15px",
           marginTop: "10px",
           display: "flex",
           alignContent: "center",
-          backgroundColor: "#F1F1F1",
+          backgroundColor: "#FFDCE0",
           justifyContent: "space-between",
         }}
       >
-        <Text font={Font.Medium}>Sugar</Text>
-        <Text font={Font.Medium}>mg</Text>
+        <Text color="#FF2222" font={Font.Medium}>
+          Sugars
+        </Text>
+        <Text color="#FF2222" font={Font.Medium}>
+          8mg
+        </Text>
       </div>
-      <div
-        style={{
-          width: "70%",
-          padding: "10px",
-          marginTop: "10px",
-          display: "flex",
-          alignContent: "center",
-          backgroundColor: "#F1F1F1",
-          justifyContent: "space-between",
-        }}
+      <Text
+        style={{ margin: "10px" }}
+        size="0.8rem"
+        color="#FF2222"
+        font={Font.Medium}
       >
-        <Text font={Font.Medium}>Amount</Text>
-        <Text font={Font.Medium}>g</Text>
-      </div>
+        ⚠ Be careful not to exceed 5g of sugar per serving
+      </Text>
     </div>
   );
 };
