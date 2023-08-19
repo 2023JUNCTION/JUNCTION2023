@@ -65,7 +65,7 @@ const SelectMenu = () => {
             alignItems: "center",
           }}
         >
-          Nutrients
+          Nutritional Control
         </Text>
       </div>
       <div

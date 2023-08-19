@@ -21,10 +21,6 @@ const Button = styled.button<ButtonProps>`
   font-weight: 500;
   margin: 15px;
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-  box-shadow: ${(props) =>
-    props.disabled
-      ? "none"
-      : "inset -10px -10px 10px rgba(151, 151, 151, 0.5)"};
   &:hover {
     background-color: ${(props) =>
       props.disabled ? "#e0e0e0" : colorSet.gray40};

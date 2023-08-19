@@ -1,3 +1,5 @@
+import colorSet from "src/styles/colorSet";
+
 import Button from "../../Button";
 
 const Tray = () => {
@@ -7,7 +9,7 @@ const Tray = () => {
         style={{
           borderRadius: "5%",
           padding: "20px",
-          //backgroundColor: "#ececec",
+          backgroundColor: colorSet.gray20,
           //boxShadow: "10px 10px 10px rgba(151, 151, 151, 0.3)",
         }}
       >

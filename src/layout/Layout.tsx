@@ -5,9 +5,9 @@ const Layout = () => {
   // useAuth();
 
   return (
-    <div>
+    <>
       <Outlet />
-    </div>
+    </>
   );
 };
 

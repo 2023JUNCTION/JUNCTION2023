@@ -1,11 +1,9 @@
-import "./App.css";
-
 import { Route, Routes } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 import Homepage from "./pages/homepage/homepage";
-import Playground from "./pages/playground/Playground";
 import MakePage from "./pages/makepage/makePage";
+import Playground from "./pages/playground/Playground";
 import GlobalStyle from "./styles/globalStyles";
 
 const App = () => {
