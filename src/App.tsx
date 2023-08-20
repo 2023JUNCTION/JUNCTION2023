@@ -1,3 +1,4 @@
+import { Provider } from "jotai";
 import { Route, Routes } from "react-router-dom";
 
 import Layout from "./layout/Layout";
@@ -9,17 +10,17 @@ import GlobalStyle from "./styles/globalStyles";
 
 const App = () => {
   return (
-    <>
+    <Provider>
       <GlobalStyle />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/pl" element={<Playground />} />
           <Route path="/" element={<Homepage />} />
-          <Route path="/menu" element={<MenuPage />} />
-          <Route path="/make" element={<MakePage />} />
+          <Route path="/menu_legacy" element={<MenuPage />} />
+          <Route path="/menu" element={<MakePage />} />
         </Route>
       </Routes>
-    </>
+    </Provider>
   );
 };
 

@@ -5,7 +5,6 @@ const Table_styled = styled.table`
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 14px;
-  width: "700px";
   margin-top: 30px;
   margin-bottom: 30px;
 `;
@@ -21,6 +20,8 @@ const TH = styled.th`
   background-color: ${colorSet.gray10};
   color: ${colorSet.gray50};
   padding: 0 30px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
 `;
 
 const TB = styled.th`
@@ -29,10 +30,13 @@ const TB = styled.th`
   background-color: white;
   color: ${colorSet.gray50};
   padding: 0 30px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
 `;
 
 const THTR = styled.tr`
-  height: 50px;
+  height: 40px;
+  border-bottom: 1px solid ${colorSet.gray10};
 `;
 
 const TBody = styled.tbody`
@@ -40,6 +44,15 @@ const TBody = styled.tbody`
     background-color: white;
   }
 `;
+
+const NutritionInfoDummy = {
+  sodium: 10,
+  carbohydrate: 10,
+  totalSugars: 10,
+  protein: 10,
+  totalFat: 10,
+  transFat: 10,
+};
 
 const MenuInfoTable = () => {
   return (
@@ -56,12 +69,12 @@ const MenuInfoTable = () => {
       </THead>
       <TBody>
         <THTR>
-          <TB>10mg</TB>
-          <TB>10mg</TB>
-          <TB>10mg</TB>
-          <TB>10mg</TB>
-          <TB>10mg</TB>
-          <TB>10mg</TB>
+          <TB>{NutritionInfoDummy.sodium}mg</TB>
+          <TB>{NutritionInfoDummy.carbohydrate}mg</TB>
+          <TB>{NutritionInfoDummy.totalSugars}mg</TB>
+          <TB>{NutritionInfoDummy.protein}mg</TB>
+          <TB>{NutritionInfoDummy.totalFat}mg</TB>
+          <TB>{NutritionInfoDummy.transFat}mg</TB>
         </THTR>
       </TBody>
     </Table_styled>

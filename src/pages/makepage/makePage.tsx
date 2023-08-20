@@ -1,57 +1,50 @@
-import Tag from "src/atoms/tag/Tag";
+import Flex from "src/atoms/containers/Flex";
+import Spacer from "src/atoms/spacer/Spacer";
 import Text from "src/atoms/text/Text";
-import MenuInfoTable from "src/molecule/table/menuInfoTable";
-import SelectMenu from "src/pages/makepage/selectMenu";
+import MenuInfoTable from "src/pages/makepage/menuInfoTable";
 import Tray from "src/pages/makepage/tray";
-import colorSet from "src/styles/colorSet";
 import Font from "src/styles/font";
+
+import MenuComposer from "./MenuComposer";
+import TagSelect from "./TagSelect";
 
 const MakePage = () => {
   return (
-    <div>
-      <div
+    <>
+      <Spacer width="250px" />
+      <Flex
+        justifyContent="space-between"
+        width="calc(100vw - 250px)"
         style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100vw",
-          height: "100vh",
+          boxSizing: "border-box",
+          paddingLeft: "30px",
         }}
       >
         <div
           style={{
-            position: "absolute",
-            left: "320px",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <Text style={{ padding: "10px" }} size="1.5rem" font={Font.Bold}>
-            2023.08.20. - Breakfast
-          </Text>
-          <div style={{ padding: "10px" }}>
-            <Tag color="#FF288F">
-              <Text color={colorSet.white} font={Font.Regular}>
-                Diabetes
-              </Text>
-            </Tag>
+          <div>
+            <Text size="1.5rem" font={Font.Medium}>
+              2023.08.20. - Breakfast
+            </Text>
 
-            <Tag color="#FF4228">
-              <Text color={colorSet.white} font={Font.Regular}>
-                No Caffeine
-              </Text>
-            </Tag>
-            <Tag color="#00B2FF">
-              <Text color={colorSet.white} font={Font.Regular}>
-                Low salt
-              </Text>
-            </Tag>
+            <Spacer height="10px" />
+
+            <TagSelect />
+
             <MenuInfoTable></MenuInfoTable>
+
+            <Tray></Tray>
           </div>
-          <Tray></Tray>
         </div>
-        <SelectMenu></SelectMenu>
-      </div>
-    </div>
+        <MenuComposer />
+      </Flex>
+    </>
   );
 };
 
