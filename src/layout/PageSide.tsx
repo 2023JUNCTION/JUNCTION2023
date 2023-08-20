@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Group, Home, Menu, Profile, Settings } from "src/assets/Icons";
+import { Logo } from "src/assets/Logo";
 import Flex from "src/atoms/containers/Flex";
 import Text from "src/atoms/text/Text";
 import colorSet from "src/styles/colorSet";
@@ -84,6 +85,7 @@ const PageSide = () => {
       justifyContent="space-between"
     >
       <Flex flexDirection="column" gap="36px">
+        <Logo size="180px" />
         {menuNav.map((menu) => (
           <MenuBtn
             {...menu}
